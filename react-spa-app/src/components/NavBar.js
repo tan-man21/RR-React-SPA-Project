@@ -1,6 +1,4 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
@@ -12,8 +10,8 @@ function NavBar() {
     return (
         <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3" bg='dark' data-bs-theme='dark'>
           <Container fluid>
-          <span class="material-symbols-outlined" style={{color: 'white'}}>exercise</span>
-            <Navbar.Brand href="#">Fit Finder</Navbar.Brand>
+          <span className="material-symbols-outlined" style={{color: 'white'}}>exercise</span>
+            <Navbar.Brand href="/">Fit Finder</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -28,7 +26,7 @@ function NavBar() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
+                  <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="#action2">Workout Plan</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
