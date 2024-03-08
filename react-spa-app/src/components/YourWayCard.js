@@ -2,6 +2,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
 function YourWayCard() {
+
     return (
     <div className='d-flex align-items-center justify-content-center' style={{height: '90vh'}}>
         <Card

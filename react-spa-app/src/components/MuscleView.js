@@ -13,6 +13,8 @@ import NavBar from "./NavBar";
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import React, {useState, useEffect} from 'react';
+import {Link, useParams, useNavigate} from 'react-router-dom';
 
 
 function MuscleView() {
