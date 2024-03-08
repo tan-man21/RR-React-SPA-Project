@@ -14,7 +14,7 @@ import {useState, useEffect} from 'react';
 function App() {
   const [exercises, setExercise] = useState([])
 
-  const API_URL = 'https://wger.de/api/v2/exercise/'
+  const API_URL = 'https://wger.de/api/v2/exercise/?muscles=1&limit=40'
 
   useEffect(() => {
     const fetchData = async () => {

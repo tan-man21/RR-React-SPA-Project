@@ -17,13 +17,13 @@ import React, {useState, useEffect} from 'react';
 import {Link, useParams, useNavigate} from 'react-router-dom';
 
 
-function MuscleView() {
+function MuscleView(props) {
 
     return (
         <div>
             <NavBar />
             <Row xs={2} md={2} className="g-4" style={{padding: '15px'}}>
-                <Col>
+                <Col key={1}>
                 <Card>
                     <Card.Img variant="top" src={shoulder} style={{height: '100px', width: '100px', margin: 'auto'}} />
                     <Card.Body>
