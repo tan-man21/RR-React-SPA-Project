@@ -12,21 +12,6 @@ import {useState, useEffect} from 'react';
 //
 
 function App() {
-  const [exercises, setExercise] = useState([])
-
-  const API_URL = 'https://wger.de/api/v2/exercise/?muscles=1&limit=40'
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch(API_URL)
-      const resData = await response.json()
-      if(resData.results.length > 0){
-        setExercise(resData.results)
-      }
-    }
-    fetchData()
-  }, [])
-  console.log(exercises)
 
   return (
     <div className="App">
