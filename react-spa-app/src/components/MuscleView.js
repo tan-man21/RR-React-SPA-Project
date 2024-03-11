@@ -14,20 +14,20 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import React, {useState, useEffect} from 'react';
-import {Link, useParams, useNavigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import { ExerciseContext } from '../context/ExerciseContext';
+import { useContext } from 'react';
 
 
-function MuscleView(props) {
-
-    const [exercises, setExercise] = useState([])
+function MuscleView() {
+    const [data, setData] = useContext(ExerciseContext)
 
     const handleCardClick = async (keyValue) => {
         const API_URL = `https://wger.de/api/v2/exercise/?muscles=${keyValue}&limit=40`
         const response = await fetch(API_URL)
         const resData = await response.json()
         if(resData.results.length > 0){
-            setExercise(resData.results)
-            console.log(resData.results)
+            setData(resData.results)
         }
     };
     useEffect(() => {
@@ -39,8 +39,8 @@ function MuscleView(props) {
             <NavBar />
             <Row xs={2} md={2} className="g-4" style={{padding: '15px'}}>
                 <Col>
-                <Link to={`/muscles/${2}`} style={{textDecoration: 'none'}}>
-                    <Card keyValue={2} onClick={() => handleCardClick(2)}>
+                <Link to={{pathname: `/muscles/${2}`}} state={{exercises: data}} onClick={() => handleCardClick(9)} style={{textDecoration: 'none'}}>
+                    <Card keyValue={2} className='mb-4'>
                         <Card.Img variant="top" src={shoulder} style={{height: '100px', width: '100px', margin: 'auto'}} />
                         <Card.Body>
                         <Card.Title>Shoulders</Card.Title>
