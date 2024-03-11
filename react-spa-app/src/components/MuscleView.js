@@ -40,7 +40,7 @@ function MuscleView() {
             <Row xs={2} md={2} className="g-4" style={{padding: '15px'}}>
                 <Col>
                 <Link to={{pathname: `/muscles/${2}`}} state={{exercises: data}} onClick={() => handleCardClick(9)} style={{textDecoration: 'none'}}>
-                    <Card keyValue={2} className='mb-4'>
+                    <Card keyValue={2}>
                         <Card.Img variant="top" src={shoulder} style={{height: '100px', width: '100px', margin: 'auto'}} />
                         <Card.Body>
                         <Card.Title>Shoulders</Card.Title>
@@ -49,7 +49,7 @@ function MuscleView() {
                 </Link>
                 </Col>
                 <Col>
-                <Link to={`/muscles/${9}`} style={{textDecoration: 'none'}}>
+                <Link to={{pathname: `/muscles/${9}`}} state={{exercises: data}} style={{textDecoration: 'none'}}>
                     <Card keyValue={9} onClick={() => handleCardClick(9)}>
                         <Card.Img variant="top" src={traps} style={{height: '100px', width: '100px', margin: 'auto'}} />
                         <Card.Body>
@@ -59,7 +59,7 @@ function MuscleView() {
                 </Link>
                 </Col>
                 <Col>
-                <Link to={`/muscles/${5}`} style={{textDecoration: 'none'}}>
+                <Link to={{pathname: `/muscles/${5}`}} state={{exercises: data}} style={{textDecoration: 'none'}}>
                     <Card keyValue={5} onClick={() => handleCardClick(5)}>
                         <Card.Img variant="top" src={tris} style={{height: '100px', width: '100px', margin: 'auto'}} />
                         <Card.Body>
@@ -69,7 +69,7 @@ function MuscleView() {
                 </Link>
                 </Col>
                 <Col>
-                <Link to={`/muscles/${8}`} style={{textDecoration: 'none'}}>
+                <Link to={{pathname: `/muscles/${8}`}} state={{exercises: data}} style={{textDecoration: 'none'}}>
                     <Card keyValue={8} onClick={() => handleCardClick(8)}>
                         <Card.Img variant="top" src={glutes} style={{height: '100px', width: '100px', margin: 'auto'}} />
                         <Card.Body>
@@ -79,7 +79,7 @@ function MuscleView() {
                 </Link>
                 </Col>
                 <Col>
-                <Link to={`/muscles/${11}`} style={{textDecoration: 'none'}}>
+                <Link to={{pathname: `/muscles/${11}}`}} state={{exercises: data}} style={{textDecoration: 'none'}}>
                     <Card keyValue={11} onClick={() => handleCardClick(11)}>
                         <Card.Img variant="top" src={hams} style={{height: '100px', width: '100px', margin: 'auto'}} />
                         <Card.Body>
@@ -89,7 +89,7 @@ function MuscleView() {
                 </Link>
                 </Col>
                 <Col>
-                <Link to={`/muscles/${1}`} style={{textDecoration: 'none'}}>
+                <Link to={{pathname: `/muscles/${1}`}} state={{exercises: data}} style={{textDecoration: 'none'}}>
                     <Card keyValue={1} onClick={() => handleCardClick(1)}>
                         <Card.Img variant="top" src={biceps} style={{height: '100px', width: '100px', margin: 'auto'}} />
                         <Card.Body>
@@ -99,7 +99,7 @@ function MuscleView() {
                 </Link>
                 </Col>
                 <Col>
-                <Link to={`/muscles/${7}`} style={{textDecoration: 'none'}}>
+                <Link to={{pathname: `/muscles/${7}`}} state={{exercises: data}} style={{textDecoration: 'none'}}>
                     <Card keyValue={7} onClick={() => handleCardClick(7)}>
                         <Card.Img variant="top" src={calves} style={{height: '100px', width: '100px', margin: 'auto'}} />
                         <Card.Body>
@@ -109,7 +109,7 @@ function MuscleView() {
                 </Link>
                 </Col>
                 <Col>
-                <Link to={`/muscles/${12}`} style={{textDecoration: 'none'}}>
+                <Link to={{pathname: `/muscles/${12}`}} state={{exercises: data}} style={{textDecoration: 'none'}}>
                     <Card keyValue={12} onClick={() => handleCardClick(12)}>
                         <Card.Img variant="top" src={lats} style={{height: '100px', width: '100px', margin: 'auto'}} />
                         <Card.Body>
@@ -119,7 +119,7 @@ function MuscleView() {
                 </Link>
                 </Col>
                 <Col>
-                <Link to={`/muscles/${4}`} style={{textDecoration: 'none'}}>
+                <Link to={{pathname: `/muscles/${4}`}} state={{exercises: data}} style={{textDecoration: 'none'}}>
                     <Card keyValue={4} onClick={() => handleCardClick(4)}>
                         <Card.Img variant="top" src={chest} style={{height: '100px', width: '100px', margin: 'auto'}} />
                         <Card.Body>
@@ -129,7 +129,7 @@ function MuscleView() {
                 </Link>
                 </Col>
                 <Col>
-                <Link to={`/muscles/${10}`} style={{textDecoration: 'none'}}>
+                <Link to={{pathname: `/muscles/${10}`}} state={{exercises: data}} style={{textDecoration: 'none'}}>
                     <Card keyValue={10} onClick={() => handleCardClick(10)}>
                         <Card.Img variant="top" src={quads} style={{height: '100px', width: '100px', margin: 'auto'}} />
                         <Card.Body>
@@ -138,8 +138,8 @@ function MuscleView() {
                     </Card>
                 </Link>
                 </Col>
-                <Link to={`/muscles/${6}`} style={{textDecoration: 'none'}}>
-                    <Card style={{margin: ' 1.5rem auto'}} keyValue={6} onClick={() => handleCardClick(6)}>
+                <Link to={{pathname: `/muscles/${6}`}} state={{exercises: data}} style={{textDecoration: 'none', margin: '1.5rem auto'}}>
+                    <Card keyValue={6} onClick={() => handleCardClick(6)}>
                         <Card.Img variant="top" src={abs} style={{height: '100px', width: '100px', margin: 'auto'}} />
                         <Card.Body>
                         <Card.Title>Abs</Card.Title>

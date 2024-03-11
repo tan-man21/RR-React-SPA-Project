@@ -14,7 +14,6 @@ import { useState } from 'react';
 
 function App() {
   const [data, setData] = useState([]);
-
   return (
     <div className="App">
       <ExerciseContext.Provider value={[data, setData]}>

@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 function YourWayCard() {
 
     return (
-    <div className='d-flex align-items-center justify-content-center' style={{height: '90vh'}}>
+    <div className='d-flex align-items-center justify-content-center' style={{height: '91.5vh'}}>
         <Card
           style={{ width: '18rem', height: '25%'}}
           className="mb-2"
